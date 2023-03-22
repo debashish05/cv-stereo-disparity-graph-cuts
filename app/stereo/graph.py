@@ -1,12 +1,3 @@
-import maxflow
-import numpy as np
-import sys
-from .utils import to_gray
-
-def disparity(image_left, image_right, **kwargs):
-    solver = GraphCutDisparitySolver(image_left, image_right, **kwargs)
-    return solver.solve()
-
 # Based on https://github.com/pmonasse/disparity-with-graph-cuts
 class GraphCutDisparitySolver:
     LABEL_OCCLUDED = 1
